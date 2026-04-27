@@ -1,4 +1,5 @@
 using STO.Data;
+using STO.Data.Context;
 using STO.Web.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,14 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+// Seed reference data and demo data on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<StoDbContext>();
+    await db.Database.EnsureCreatedAsync();
+    await SeedData.SeedDemoDataAsync(db);
+}
 
 if (app.Environment.IsDevelopment())
 {

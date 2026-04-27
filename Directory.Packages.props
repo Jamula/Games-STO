@@ -1,0 +1,28 @@
+<Project>
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Discord -->
+    <PackageVersion Include="DSharpPlus" Version="5.0.0-nightly-02584" />
+    <PackageVersion Include="DSharpPlus.Commands" Version="5.0.0-nightly-02584" />
+
+    <!-- Entity Framework Core -->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.7" />
+
+    <!-- ASP.NET Core -->
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
+
+    <!-- Microsoft Extensions -->
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
+
+    <!-- Copilot -->
+    <PackageVersion Include="GitHub.Copilot.SDK" Version="0.3.0" />
+  </ItemGroup>
+
+</Project>
