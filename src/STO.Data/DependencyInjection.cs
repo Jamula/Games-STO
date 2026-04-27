@@ -19,6 +19,7 @@ public static class DependencyInjection
         services.AddScoped<IInventoryService, InventoryService>();
         services.AddScoped<IReputationService, ReputationService>();
         services.AddScoped<IValuableItemService, ValuableItemService>();
+        services.AddScoped<ICsvImportService, CsvImportService>();
 
         return services;
     }
